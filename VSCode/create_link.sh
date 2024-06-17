@@ -1,0 +1,1 @@
+stow -t ~/.vscode-server/data/User User
