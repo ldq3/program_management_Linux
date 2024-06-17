@@ -1,0 +1,16 @@
+{
+    "extensions": {
+        "recommendations": [
+            "sketchbuch.vsc-workspace-sidebar",
+            "waderyan.gitblame",
+        ],
+    },
+
+    "settings": {},
+    
+    "folders": [
+        {
+            "path": "../../../../my_project/program_management_Linux"
+        }
+    ],
+}
