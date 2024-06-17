@@ -2,7 +2,8 @@
     "extensions": {
         "recommendations": [
             "sketchbuch.vsc-workspace-sidebar",
-            "waderyan.gitblame",
+            "donjayamanne.git-extension-pack",
+            "mhutchie.git-graph",
         ],
     },
 
