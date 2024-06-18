@@ -6,6 +6,8 @@
             "mcu-debug.memory-view",
             "mcu-debug.peripheral-viewer",
             "mcu-debug.rtos-views",
+            "1yib.rust-bundle",
+            "zhangyue.rust-mod-generator",
         ]
     },
 
@@ -32,9 +34,9 @@
                 },
                 "group": "none",
                 "options": {
-                    "cwd": "${workspaceFolder}"
+                    "cwd": "${fileWorkspaceFolder}"
                 }
-            }
+            },
         ]
     },
 
@@ -46,8 +48,8 @@
         "configurations": [
             {
                 "name": "Cortex Debug STM32F1",
-                "cwd": "${workspaceFolder}",
-                "executable": "./target/thumbv7m-none-eabi/debug/${fileBasenameNoExtension}",
+                "cwd": "${fileWorkspaceFolder}",
+                "executable": "target/thumbv7m-none-eabi/debug/${fileBasenameNoExtension}",
                 "request": "launch",
                 "type": "cortex-debug",
                 "runToEntryPoint": "main",
@@ -62,6 +64,12 @@
     "folders": [
         {
             "path": "../../../../my_project/embassy/examples/stm32f1"
+        },
+        {
+            "path": "../../../../my_project/embassy/examples/stm32f2"
+        },
+        {
+            "path": "../../../../my_project/embassy/examples/std"
         }
     ],
     "settings": {},
