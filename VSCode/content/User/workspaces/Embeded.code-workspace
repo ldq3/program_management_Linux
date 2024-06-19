@@ -7,7 +7,7 @@
             "mcu-debug.peripheral-viewer",
             "mcu-debug.rtos-views",
             "1yib.rust-bundle",
-            "zhangyue.rust-mod-generator",
+            "tamasfe.even-better-toml",
         ]
     },
 
@@ -25,6 +25,32 @@
                     "target/thumbv7m-none-eabi/debug/${fileBasenameNoExtension}",
                     "-s",
                     "-S",
+                ],
+                "problemMatcher": [
+                    "$tsc"
+                ],
+                "presentation": {
+                    "reveal": "always"
+                },
+                "group": "none",
+                "options": {
+                    "cwd": "${fileWorkspaceFolder}"
+                }
+            },
+            {
+                "label": "QEMU Arm cortex-m3 for debugging",
+                "command": "qemu-system-arm",
+                "type": "shell",
+                "args": [
+                    "-cpu",
+                    "cortex-m3",
+                    "-machine",
+                    "lm3s6965evb",
+                    "-nographic",
+                    "-semihosting-config",
+                    "enable=on,target=native",
+                    "-kernel",
+                    "target/thumbv7m-none-eabi/debug/examples/${fileBasenameNoExtension}"
                 ],
                 "problemMatcher": [
                     "$tsc"
@@ -62,15 +88,7 @@
     },
 
     "folders": [
-        {
-            "path": "../../../../my_project/embassy/examples/stm32f1"
-        },
-        {
-            "path": "../../../../my_project/embassy/examples/stm32f2"
-        },
-        {
-            "path": "../../../../my_project/embassy/examples/std"
-        }
+        
     ],
     "settings": {},
 }
